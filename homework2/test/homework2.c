@@ -16,7 +16,8 @@
 //          prints a list of numbers up to a certain number
 //          given by the user and whether it is a multiple of 4.
 //
-//  REFERENCES: https://stackoverflow.com/questions/5087062/how-can-i-get-an-int-from-stdio-in-c
+//  REFERENCES: C Textbook Section 7.4
+//      Lab0126 in laulima resources io_prac.c and io_prac2.c
 //
 ****************************************************************/
 
@@ -68,6 +69,7 @@ int main(int argc, char* argv[])
 int user_interface()
 {
     int max_num, result;
+    char invalid_input[100];
     
     max_num = 0;
     while (max_num < 1)
@@ -78,7 +80,7 @@ int user_interface()
         if (result < 1 || max_num < 1)
         {
             printf("Invalid input. Only POSITIVE INTEGERS are allowed.\n");
-            while (getchar() != '\n');
+            fgets(invalid_input, 100, stdin);
         }
     }
 
