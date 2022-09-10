@@ -1,0 +1,18 @@
+Script started on Sat 27 Aug 2022 07:32:41 PM HST
+]0;riverjm@uhx02:~/homework1[?1034huhx02:/home/r/riverjm/homework1% /.[K[K/.[K[K./homeor[K[Kwork1 
+Hello
+Hello
+World
+World
+!!!
+!!!
+While loop!
+While loop!
+While loop!
+Do-while loop!
+Do-while loop!
+Do-while loop!
+]0;riverjm@uhx02:~/homework1uhx02:/home/r/riverjm/homework1% ext[Kit
+exit
+
+Script done on Sat 27 Aug 2022 07:32:55 PM HST

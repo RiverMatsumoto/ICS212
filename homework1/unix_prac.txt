@@ -1,0 +1,27 @@
+Script started on Sat 27 Aug 2022 07:33:34 PM HST
+]0;riverjm@uhx02:~/homework1[?1034huhx02:/home/r/riverjm/homework1% pwd
+/home/r/riverjm/homework1
+]0;riverjm@uhx02:~/homework1uhx02:/home/r/riverjm/homework1% mkdir unix_prac
+]0;riverjm@uhx02:~/homework1uhx02:/home/r/riverjm/homework1% cp [K[K[Kcp homework1 unix_prac
+]0;riverjm@uhx02:~/homework1uhx02:/home/r/riverjm/homework1% cd unix_prac/
+]0;riverjm@uhx02:~/homework1/unix_pracuhx02:/home/r/riverjm/homework1/unix_prac% mv homework1 hw1
+]0;riverjm@uhx02:~/homework1/unix_pracuhx02:/home/r/riverjm/homework1/unix_prac% ./he[Kw1 
+Hello
+Hello
+World
+World
+!!!
+!!!
+While loop!
+While loop!
+While loop!
+Do-while loop!
+Do-while loop!
+Do-while loop!
+]0;riverjm@uhx02:~/homework1/unix_pracuhx02:/home/r/riverjm/homework1/unix_prac% mv[K[Krm hw1 
+]0;riverjm@uhx02:~/homework1/unix_pracuhx02:/home/r/riverjm/homework1/unix_prac% cd ..
+]0;riverjm@uhx02:~/homework1uhx02:/home/r/riverjm/homework1% rmdir unix_prac
+]0;riverjm@uhx02:~/homework1uhx02:/home/r/riverjm/homework1% exit
+exit
+
+Script done on Sat 27 Aug 2022 07:35:11 PM HST

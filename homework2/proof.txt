@@ -1,0 +1,7 @@
+Script started on Sat 10 Sep 2022 12:15:53 AM HST
+]0;riverjm@uhx02:~/homework2[?1034huhx02:/home/r/riverjm/homework2% gcc --[Kansi -pedantic-errors -Wall -c o[Khomework2.c
+]0;riverjm@uhx02:~/homework2uhx02:/home/r/riverjm/homework2% gcc -o homework2 homework2.c[Ko
+]0;riverjm@uhx02:~/homework2uhx02:/home/r/riverjm/homework2% exit
+exit
+
+Script done on Sat 10 Sep 2022 12:16:46 AM HST

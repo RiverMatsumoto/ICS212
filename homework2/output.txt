@@ -1,0 +1,39 @@
+Script started on Sat 10 Sep 2022 12:14:56 AM HST
+]0;riverjm@uhx02:~/homework2[?1034huhx02:/home/r/riverjm/homework2% ./homework2 
+This program will print numbers from 0 to a given number and tell whether it is a multiple of 4
+
+Enter the maximum number to show
+-19 00   20
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter the maximum number to show
+0
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter the maximum number to show
+abc
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter the maximum number to show
+abc123
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter the maximum number to show
+2 14 5
+  Number  Multiple of 4?
+       0  Yes
+       1  No
+       2  No
+       3  No
+       4  Yes
+       5  No
+       6  No
+       7  No
+       8  Yes
+       9  No
+      10  No
+      11  No
+      12  Yes
+      13  No
+      14  No
+      15  No
+]0;riverjm@uhx02:~/homework2uhx02:/home/r/riverjm/homework2% exit
+exit
+
+Script done on Sat 10 Sep 2022 12:15:32 AM HST
