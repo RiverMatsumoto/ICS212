@@ -1,0 +1,50 @@
+Report by River Matsumoto:
+
+1. Firstly I noticed that the addresses decreased instead of increased
+like our practice traces.
+
+For example, if I started with an integer 4 bytes long at address
+1000, if the next variable defined was a character
+I would expect it to be 1004, then the next variable address listed would be 1005.
+
+In the program if the integer started at address 1004, and the next 
+defined variable was a character, the address would just be 1004 minus
+the size of a character type. So the character would sit at address
+1003
+
+2. Next, I printed the size of each type using sizeof and found that
+pointer = 8 bytes
+int = 4 bytes
+float = 4 bytes
+char = 1 byte
+
+This is important info for what I noticed about the pointers
+
+3. argc's address starts at 0x7ffc7a8c948c. Since a pointer
+is supposed to be 8 bytes, I would expect argv address's last digit
+to just decrease by 8 and become 0x7ffc7a8c9484. But, it decreased by
+12 (12=c) and it printed as 0x7ffc7a8c9480. I am unsure why that is. 
+I also noticed the argv pointer pointed further away in memory from most of 
+the addresses.
+
+The same exact thing happens at the char array of size 3. The combined size
+of the array pointer and it's 3 characters should be 8 + 1 + 1 + 1 = 11 or 0xb.
+However, the range of the entire array's addresses is 0x7ffc7a8c94a0 to 0x7ffc7a8c9490
+and there is some empty space in between. Almost as if there is some organization
+or grouping going on. I noticed this only happened with pointers involved with arrays
+
+4. The structure of the addresses were structured like this where the top is 
+the highest addresses and the bottom is the lowest addresses
+
+main function's variables in the body   (0x7ffc7a8c94ac to 0x7ffc7a8c9492)
+unknown gap                             (0x7ffc7a8c9492 to 0x7ffc7a8c948c)
+main function's parameter variables     (0x7ffc7a8c948c to 0x7ffc7a8c9480)
+unknown gap                             (0x7ffc7a8c9480 to 0x7ffc7a8c946c)
+dummy function's parameter variables    (0x7ffc7a8c946c to 0x7ffc7a8c945c)
+
+I am unsure about the unknown gap between the parameter variables and the body.
+Again, to me it seemed like grouping or organization going on by the program
+
+5. I also noticed that the pointer passed into the dummy function for the array is
+the exact same address as the first character of the array. This shows that
+arrays have a pointer that point to a place in memory where the array starts.
