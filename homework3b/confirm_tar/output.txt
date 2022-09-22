@@ -1,0 +1,98 @@
+Script started on Thu 22 Sep 2022 01:35:53 AM HST
+]0;riverjm@uhx02:~/ICS212/homework3b[?1034huhx02:/home/r/riverjm/ICS212/homework3b% hom[K[K[K./homework3 debug
+Entered debug mode.
+This program will access the database to add items, remove items, and read items.
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+add12334
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+123
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+add
+Enter a positive integer:
+-10
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter a positive integer:
+abc
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter a positive integer:
+8
+Give a name:
+River Matsumoto
+Give an address and enter a backslash (\) when finished.
+G^HDo     Dogg  street 
+Honolulu HI
+Apt 1234\
+
+DEBUG: Adding to the database.
+DEBUG: Accountno: 8
+DEBUG: Name: River Matsumoto
+DEBUG: Address: Dog street 
+Honolulu HI
+Apt 1234
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+printall
+DEBUG: printing all records
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+find
+Enter a positive integer:
+-4
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter a positive integer:
+0
+Invalid input. Only POSITIVE INTEGERS are allowed.
+Enter a positive integer:
+8
+DEBUG: finding record: 8
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+delete
+Enter a positive integer:
+20
+DEBUG: deleting record: 20
+
+Options:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+quit
+]0;riverjm@uhx02:~/ICS212/homework3buhx02:/home/r/riverjm/ICS212/homework3b% exit
+exit
+
+Script done on Thu 22 Sep 2022 01:37:14 AM HST
