@@ -1,98 +1,120 @@
-Script started on Thu 22 Sep 2022 01:35:53 AM HST
-]0;riverjm@uhx02:~/ICS212/homework3b[?1034huhx02:/home/r/riverjm/ICS212/homework3b% hom[K[K[K./homework3 debug
-Entered debug mode.
+Script started on Thu 22 Sep 2022 02:36:38 PM HST
+]0;riverjm@uhx02:~/ICS212/homework3b[?1034huhx02:/home/r/riverjm/ICS212/homework3b% .h[K?[K/homework3 debug zxcvsdf
 This program will access the database to add items, remove items, and read items.
+Only a single "debug" option is allowed. The program will exit.
+]0;riverjm@uhx02:~/ICS212/homework3buhx02:/home/r/riverjm/ICS212/homework3b% ./homework3 debug
+This program will access the database to add items, remove items, and read items.
+Entered debug mode.
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
-add12334
-
-Options:
-add: Add a new record.
-printall: print all records.
-find: find a specific record.
-delete: remove a specific item.
-quit: exit from the program.
-123
-
-Options:
-add: Add a new record.
-printall: print all records.
-find: find a specific record.
-delete: remove a specific item.
-quit: exit from the program.
-add
-Enter a positive integer:
--10
+add 
+Enter a positive integer:R 1 -10
 Invalid input. Only POSITIVE INTEGERS are allowed.
-Enter a positive integer:
-abc
-Invalid input. Only POSITIVE INTEGERS are allowed.
-Enter a positive integer:
-8
+Enter a positive integer:20
 Give a name:
 River Matsumoto
 Give an address and enter a backslash (\) when finished.
-G^HDo     Dogg  street 
-Honolulu HI
+A^HDog      Doo g D^HS     S  Street 
+Honlulu HI
 Apt 1234\
 
-DEBUG: Adding to the database.
-DEBUG: Accountno: 8
+DEBUG: called addRecord. Adding record to database.
+DEBUG: Accountno: 20
 DEBUG: Name: River Matsumoto
-DEBUG: Address: Dog street 
-Honolulu HI
+DEBUG: Address: Dog Street 
+Honlulu HI
 Apt 1234
 
-Options:
+Type an option below and press enter:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+addbbbbajj
+
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
 printall
-DEBUG: printing all records
+DEBUG: Called printAllRecords. Printing all records in database.
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
 find
-Enter a positive integer:
--4
+Enter a positive integer:-10
 Invalid input. Only POSITIVE INTEGERS are allowed.
-Enter a positive integer:
-0
+Enter a positive integer:abc
 Invalid input. Only POSITIVE INTEGERS are allowed.
-Enter a positive integer:
-8
-DEBUG: finding record: 8
+Enter a positive integer:5
+DEBUG: Called findRecord. Finding record: 5
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
 delete
-Enter a positive integer:
-20
-DEBUG: deleting record: 20
+Enter a positive integer:20
+DEBUG: Called deleteRecord. Deleting record: 20
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
-quit
+a
+Enter a positive integer:1
+Give a name:
+Riv
+Give an address and enter a backslash (\) when finished.
+Address\
+
+DEBUG: called addRecord. Adding record to database.
+DEBUG: Accountno: 1
+DEBUG: Name: Riv
+DEBUG: Address: Address
+
+Type an option below and press enter:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+quit    add
+Enter a positive integer:9
+Give a name:
+River
+Give an address and enter a backslash (\) when finished.
+Address2 2\
+
+DEBUG: called addRecord. Adding record to database.
+DEBUG: Accountno: 9
+DEBUG: Name: River
+DEBUG: Address: Address2
+
+Type an option below and press enter:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+e quit
 ]0;riverjm@uhx02:~/ICS212/homework3buhx02:/home/r/riverjm/ICS212/homework3b% exit
 exit
 
-Script done on Thu 22 Sep 2022 01:37:14 AM HST
+Script done on Thu 22 Sep 2022 02:38:29 PM HST

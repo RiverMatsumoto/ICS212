@@ -40,7 +40,7 @@ void addRecord (struct record **rec, int accountno, char name[], char address[])
 {
     if (debug_mode == 1)
     {
-        printf("\nDEBUG: Adding to the database.\n");
+        printf("\nDEBUG: called addRecord. Adding record to database.\n");
         printf("DEBUG: Accountno: %d\n", accountno);
         printf("DEBUG: Name: %s\n", name);
         printf("DEBUG: Address: %s\n", address);
@@ -64,7 +64,7 @@ void printAllRecords (struct record *rec)
 {
     if (debug_mode == 1)
     {
-        printf("DEBUG: printing all records\n");
+        printf("DEBUG: Called printAllRecords. Printing all records in database.\n");
     }
 }
 
@@ -74,7 +74,7 @@ void printAllRecords (struct record *rec)
 //
 //  DESCRIPTION:    
 //
-//  Parameters:    
+//  Parameters:     
 //
 //  Return values:  0 : success
 //                 -1 : the value was not found
@@ -85,7 +85,7 @@ int findRecord (struct record *rec, int accountno)
 {
     if (debug_mode == 1)
     {
-        printf("DEBUG: finding record: %d\n", accountno);
+        printf("DEBUG: Called findRecord. Finding record: %d\n", accountno);
     }
     return 0;
 }
@@ -107,7 +107,7 @@ int deleteRecord (struct record **rec, int accountno)
 {
     if (debug_mode == 1)
     {
-        printf("DEBUG: deleting record: %d\n", accountno);
+        printf("DEBUG: Called deleteRecord. Deleting record: %d\n", accountno);
     }
 
     return 0;

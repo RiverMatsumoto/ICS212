@@ -1,4 +1,4 @@
-Script started on Thu 22 Sep 2022 01:33:34 AM HST
+Script started on Thu 22 Sep 2022 02:10:46 PM HST
 ]0;riverjm@uhx02:~/ICS212/homework3b[?1034huhx02:/home/r/riverjm/ICS212/homework3b% make
 gcc -ansi -pedantic-errors -Wall -c user_interface.c
 gcc -ansi -pedantic-errors -Wall -c database.c
@@ -6,4 +6,4 @@ gcc -o homework3 user_interface.o database.o
 ]0;riverjm@uhx02:~/ICS212/homework3buhx02:/home/r/riverjm/ICS212/homework3b% exit
 exit
 
-Script done on Thu 22 Sep 2022 01:33:38 AM HST
+Script done on Thu 22 Sep 2022 02:10:50 PM HST

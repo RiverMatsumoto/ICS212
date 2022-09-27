@@ -36,9 +36,9 @@ int get_positive_int ();
 //
 //  Parameters:    argc (int) : The number of elements in argv
 //                 argv (char*[]) : An array of arguments passed
-//                                  to the program.
+//                                  to the program. 
 //
-//  Return values:  0 : program ended successfully
+//  Return values:  0 : program ended successfully 
 //
 ****************************************************************/
 
@@ -56,6 +56,9 @@ int main(int argc, char* argv[])
     char input[200] = "";
     int i, is_quitting;
 
+    printf("This program will access the database to add items, remove items, and read items.\n");
+
+    is_quitting = 0;
     debug_mode = 0;
     if (argc == 2)
     {
@@ -76,11 +79,9 @@ int main(int argc, char* argv[])
         is_quitting = 1;
     }
 
-    printf("This program will access the database to add items, remove items, and read items.\n");
-    is_quitting = 0;
     while (is_quitting != 1)
     {
-        printf("\nOptions:\n");
+        printf("\nType an option below and press enter:\n");
         printf("add: Add a new record.\n");
         printf("printall: print all records.\n");
         printf("find: find a specific record.\n");
@@ -139,7 +140,7 @@ int main(int argc, char* argv[])
 
 /*****************************************************************
 //
-//  Function name:  getaddress
+//  Function name:  getaddress 
 //
 //  DESCRIPTION:    gets an address from the stdin. Will read
 //          from the stdin buffer until a backslash '\\' is encountered.
@@ -147,7 +148,7 @@ int main(int argc, char* argv[])
 //  Parameters:     str (char []) : The string to store the address in
 //                  size (int): The maximum size of the string
 //
-//  Return values:  none
+//  Return values:  none 
 //
 ****************************************************************/
 
@@ -187,7 +188,7 @@ int get_positive_int ()
     num_input = 0;
     while (num_input <= 0)
     {
-        printf("Enter a positive integer:\n");
+        printf("Enter a positive integer:");
         result = scanf("%d", &num_input);
         
         if (result < 1 || num_input < 1)

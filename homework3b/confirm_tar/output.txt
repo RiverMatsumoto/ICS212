@@ -1,63 +1,55 @@
-Script started on Thu 22 Sep 2022 01:35:53 AM HST
-]0;riverjm@uhx02:~/ICS212/homework3b[?1034huhx02:/home/r/riverjm/ICS212/homework3b% hom[K[K[K./homework3 debug
+Script started on Thu 22 Sep 2022 02:10:57 PM HST
+]0;riverjm@uhx02:~/ICS212/homework3b[?1034huhx02:/home/r/riverjm/ICS212/homework3b% ./homework3 debug
 Entered debug mode.
 This program will access the database to add items, remove items, and read items.
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
-add12334
+add123
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
-123
-
-Options:
-add: Add a new record.
-printall: print all records.
-find: find a specific record.
-delete: remove a specific item.
-quit: exit from the program.
-add
+ad
 Enter a positive integer:
--10
+10  -123
 Invalid input. Only POSITIVE INTEGERS are allowed.
 Enter a positive integer:
-abc
+ac
 Invalid input. Only POSITIVE INTEGERS are allowed.
 Enter a positive integer:
-8
+67
 Give a name:
-River Matsumoto
+River Matrsum    sumoto
 Give an address and enter a backslash (\) when finished.
-G^HDo     Dogg  street 
-Honolulu HI
+Dog Street
+Honllu   olulu HI
 Apt 1234\
 
-DEBUG: Adding to the database.
-DEBUG: Accountno: 8
+DEBUG: called addRecord. Adding record to database.
+DEBUG: Accountno: 67
 DEBUG: Name: River Matsumoto
-DEBUG: Address: Dog street 
+DEBUG: Address: Dog Street
 Honolulu HI
 Apt 1234
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
 printall
-DEBUG: printing all records
+DEBUG: Called printAllRecords. Printing all records in database.
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
@@ -65,27 +57,40 @@ delete: remove a specific item.
 quit: exit from the program.
 find
 Enter a positive integer:
--4
-Invalid input. Only POSITIVE INTEGERS are allowed.
-Enter a positive integer:
-0
-Invalid input. Only POSITIVE INTEGERS are allowed.
-Enter a positive integer:
-8
-DEBUG: finding record: 8
+14
+DEBUG: Called findRecord. Finding record: 14
 
-Options:
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
-delete
+f delete
 Enter a positive integer:
-20
-DEBUG: deleting record: 20
+89
+DEBUG: Called deleteRecord. Deleting record: 89
 
-Options:
+Type an option below and press enter:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+a
+Enter a positive integer:
+1
+Give a name:
+Riv
+Give an address and enter a backslash (\) when finished.
+D Address\
+
+DEBUG: called addRecord. Adding record to database.
+DEBUG: Accountno: 1
+DEBUG: Name: Riv
+DEBUG: Address: Address
+
+Type an option below and press enter:
 add: Add a new record.
 printall: print all records.
 find: find a specific record.
@@ -95,4 +100,4 @@ quit
 ]0;riverjm@uhx02:~/ICS212/homework3buhx02:/home/r/riverjm/ICS212/homework3b% exit
 exit
 
-Script done on Thu 22 Sep 2022 01:37:14 AM HST
+Script done on Thu 22 Sep 2022 02:12:18 PM HST

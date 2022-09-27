@@ -80,7 +80,7 @@ int main(int argc, char* argv[])
     is_quitting = 0;
     while (is_quitting != 1)
     {
-        printf("\nOptions:\n");
+        printf("\nType an option below and press enter:\n");
         printf("add: Add a new record.\n");
         printf("printall: print all records.\n");
         printf("find: find a specific record.\n");
@@ -139,7 +139,7 @@ int main(int argc, char* argv[])
 
 /*****************************************************************
 //
-//  Function name:  getaddress
+//  Function name:  getaddress 
 //
 //  DESCRIPTION:    gets an address from the stdin. Will read
 //          from the stdin buffer until a backslash '\\' is encountered.
