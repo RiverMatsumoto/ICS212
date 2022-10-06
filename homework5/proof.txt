@@ -1,0 +1,9 @@
+Script started on Thu 06 Oct 2022 01:38:39 PM HST
+]0;riverjm@uhx02:~/ICS212/homework5[?1034huhx02:/home/r/riverjm/ICS212/homework5% make
+gcc -ansi -pedantic-errors -Wall -c driver.c
+gcc -ansi -pedantic-errors -Wall -c iofunctions.c
+gcc -o homework5 driver.o iofunctions.o
+]0;riverjm@uhx02:~/ICS212/homework5uhx02:/home/r/riverjm/ICS212/homework5% exit
+exit
+
+Script done on Thu 06 Oct 2022 01:38:42 PM HST

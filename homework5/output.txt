@@ -1,0 +1,86 @@
+Script started on Thu 06 Oct 2022 01:39:04 PM HST
+]0;riverjm@uhx02:~/ICS212/homework5[?1034huhx02:/home/r/riverjm/ICS212/homework5% ./homework5 
+NOTE ON TESTS: This driver code will not use any hand-made files to read and write from. It will create it on its own
+
+=======TEST 1 ON writefile FUNCTION=========
+Testing whether the writefile functions successfully creates a file and writes the pokemon data to that file.
+
+Setting up test 1 data
+Pokemon array data (5 pokemons): 
+Pokemon 0:  name = Charizard        level = 46
+Pokemon 1:  name = Blastoise        level = 63
+Pokemon 2:  name = Mewtwo           level = 73
+Pokemon 3:  name = Cubone           level = 19
+Pokemon 4:  name = Gengar           level = 37
+
+Called writefile function and is attempting to write to "myPokemon"
+writefile returned 0
+Successfully wrote to the file "myPokemon"
+
+
+==========TEST 2 ON readfile FUNCTION==========
+Testing whether the readfile function parses the file and stores the data in the pokemon array
+
+Setting up test 2 data
+Pokemon array data before reading from the file: 
+Pokemon 0:  name =                  level = 0
+Pokemon 1:  name =                  level = 0
+Pokemon 2:  name =                  level = 0
+Pokemon 3:  name =                  level = 0
+Pokemon 4:  name =                  level = 0
+
+Calling the readfile function
+readfile returned 0
+Successfully opened file in readfile function
+
+Pokemon array data after attempting to read from the file: 
+Pokemon 0:  name = Charizard        level = 46
+Pokemon 1:  name = Blastoise        level = 63
+Pokemon 2:  name = Mewtwo           level = 73
+Pokemon 3:  name = Cubone           level = 19
+Pokemon 4:  name = Gengar           level = 37
+Checking for correct number of pokemon read from the file.
+Successfully read the correct number of pokemon from the file. Expected 5 pokemon
+
+===========TEST 3 ON writefile WITH 7 POKEMONS===========
+Testing whether the writefile function will overwrite the previous file with another set of pokemons
+Setting up test 3 data
+Pokemon array data (7 pokemons): 
+Pokemon 0:  name = Charmander       level = 13
+Pokemon 1:  name = Seal             level = 27
+Pokemon 2:  name = Lugia            level = 65
+Pokemon 3:  name = Driftloon        level = 19
+Pokemon 4:  name = Geodude          level = 28
+Pokemon 5:  name = Pikachu          level = 38
+Pokemon 6:  name = Staraptor        level = 47
+
+Called writefile function with above data
+Successfully wrote to file with given data
+
+
+===========TEST 4 ON readfile===========
+Testing that the readfile will not store more than the array can hold (max 5 pokemons) even though the file has 7 pokemon
+Setting up test 4 data
+Pokemon array data before reading the file (array size = 5): 
+Pokemon 0:  name =                  level = 0
+Pokemon 1:  name =                  level = 0
+Pokemon 2:  name =                  level = 0
+Pokemon 3:  name =                  level = 0
+Pokemon 4:  name =                  level = 0
+
+Called writefile function with above data
+writefile returned 0
+Successfully wrote to file with given data
+
+
+Pokemon array data after reading the file (array size = 5): 
+Pokemon 0:  name = Charmander       level = 13
+Pokemon 1:  name = Seal             level = 27
+Pokemon 2:  name = Lugia            level = 65
+Pokemon 3:  name = Driftloon        level = 19
+Pokemon 4:  name = Geodude          level = 28
+
+]0;riverjm@uhx02:~/ICS212/homework5uhx02:/home/r/riverjm/ICS212/homework5% exit
+exit
+
+Script done on Thu 06 Oct 2022 01:39:11 PM HST
