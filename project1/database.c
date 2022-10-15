@@ -231,7 +231,7 @@ int deleteRecord (struct record **start, int accountno)
 int writefile (struct record *start, char filename[])
 {
     FILE *file;
-    int i, result;
+    int result;
     struct record *current;
 
     if ((file = fopen(filename, "w")) != NULL)
@@ -239,7 +239,7 @@ int writefile (struct record *start, char filename[])
         current = start;
         while (current != NULL)
         {
-            fprintf(file, "%d\n%s\n%s\n~", current->accountno, current->name, current->address);
+            fprintf(file, "%d\n%s\n%s~\n", current->accountno, current->name, current->address);
             current = current->next;
         }
 
@@ -269,7 +269,7 @@ int writefile (struct record *start, char filename[])
 //
 ****************************************************************/
 
-int readfile (struct record *start, char filename[])
+int readfile (struct record **start, char filename[])
 {
     FILE *file;
     int i, result, done_reading = 0;
@@ -277,44 +277,52 @@ int readfile (struct record *start, char filename[])
     char accountno[31];
     char name[31];
     char address[61];
+    char buffer[100];
     char address_buffer;
 
     if ((file = fopen(filename, "r")) != NULL)
     {
         while (done_reading != 1)
         {
-            if (current == NULL)
-            {
-                current = malloc(sizeof(struct record));
-                start = current;
-            }
-            else
-            {
-                current->next = malloc(sizeof(struct record));
-                current = current->next;
-            }
 
-            if (fgets(accountno, 31, file) == NULL)
+            if (feof(file) != 0)
             {
                 done_reading = 1;
             }
             else 
             {
+                if (current == NULL)
+                {
+                    current = malloc(sizeof(struct record));
+                    *start = current;
+                }
+                else
+                {
+                    current->next = malloc(sizeof(struct record));
+                    current = current->next;
+                }
+
+                fgets(accountno, 31, file);
                 fgets(name, 31, file);
 
-                for (i = 0; i < 60; i++)
+                for (i = 0; i < 61; i++)
                 {
                     address_buffer = fgetc(file);
 
                     if (address_buffer == '~')
                     {
                         address[i] = '\0';
+                        printf("Found the tilde: %s\n", address);
+                        i = 61;
+                        fgets(buffer, 100, file);
+                        fgetc(file);
                     }
                     else
                     {
                         address[i] = address_buffer;
                     }
                 }
+                /*fgets(buffer, 50, file);*/
 
                 current->accountno = strtol(accountno, NULL, 10);
 
