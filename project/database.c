@@ -8,7 +8,7 @@
 //
 //  INSTRUCTOR:  Ravi Narayan
 //
-//  DATE:        October 31, 2022
+//  DATE:        October 31, 2022 
 //
 //  FILE:        database.c
 //
@@ -32,6 +32,9 @@ extern int debug_mode;
 //  DESCRIPTION:   Adds a record to the database.
 //
 //  Parameters:    start (struct record **): a pointer to the pointer to the first record in the database
+//                  accountno (int): the accountno of the record
+//                  name (char[]): the name of the record
+//                  address (char[]): the address of the record
 //
 //  Return values:  none
 //
@@ -67,21 +70,31 @@ void addRecord (struct record **start, int accountno, char name[], char address[
     }
     else
     {
+        /* iterate to the correct placement of the record */
         current = *start;
-        while (accountno <= current->accountno && current->next != NULL)
+        while (accountno < current->accountno && current->next != NULL)
         {
             previous = current;
             current = current->next;
-            if (accountno >= current->accountno && current->next != NULL)
+            if (accountno >= current->accountno)
             {
                 previous->next = new_record;
                 new_record->next = current;
             }
         }
         
-        if (new_record->next == NULL)
+        /* Need one last check for when we reach the end of the list */
+        if (current->next == NULL)
         {
-            current->next = current;
+            if (accountno >= current->accountno)
+            {
+                previous->next = new_record;
+                new_record->next = current;
+            }
+            else
+            {
+                current->next = new_record;
+            }
         }
     }
 }
@@ -129,6 +142,7 @@ void printAllRecords (struct record *start)
 //  DESCRIPTION:     finds a record in the database and prints it.
 //
 //  Parameters:    start (struct record *): Points to the first record in the database.
+//                  accountno (int): The accountno of the record to find
 //
 //  Return values:  0 : success
 //                 -1 : the value was not found
@@ -137,11 +151,32 @@ void printAllRecords (struct record *start)
 
 int findRecord (struct record *start, int accountno)
 {
+    struct record *current;
+    int result;
+
     if (debug_mode == 1)
     {
         printf("DEBUG: Called findRecord. Finding record: %d\n", accountno);
     }
-    return 0;
+
+    current = start;
+    while (current != NULL && accountno != current->accountno)
+    {
+        current = current->next;
+    }
+    if (current != NULL)
+    {
+        printf("Record with accountno %d found\n", accountno);
+        printf("Accountno: %d\n", current->accountno);
+        printf("Name: %s\n", current->name);
+        printf("Address: %s\n", current->address);
+        result = 0;
+    }
+    else
+    {
+        result = -1;
+    }
+    return result;
 }
 
 /*****************************************************************
@@ -234,12 +269,18 @@ int writefile (struct record *start, char filename[])
     int result;
     struct record *current;
 
+    if (debug_mode == 1)
+    {
+        printf("Called write, copying the database to disk\n");
+        printf("Filename: %s\n", filename);
+    }
+
     if ((file = fopen(filename, "w")) != NULL)
     {
         current = start;
         while (current != NULL)
         {
-            fprintf(file, "%d\n%s\n%s~\n", current->accountno, current->name, current->address);
+            fprintf(file, " %d\n%s\n%s~\n", current->accountno, current->name, current->address);
             current = current->next;
         }
 
@@ -273,37 +314,38 @@ int readfile (struct record **start, char filename[])
 {
     FILE *file;
     int i, result, done_reading = 0;
-    struct record *current;
-    char accountno[31];
+    /*struct record *current;*/
+    int accountno;
+    char accountno_text[31];
     char name[31];
     char address[61];
     char buffer[100];
     char address_buffer;
 
+    if (debug_mode == 1)
+    {
+        printf("Called readfile, parsing the file to add to the database\n");
+        printf("Filename: %s\n", filename);
+    }
+
     if ((file = fopen(filename, "r")) != NULL)
     {
         while (done_reading != 1)
         {
-
-            if (feof(file) != 0)
+            if (feof(file))
             {
                 done_reading = 1;
             }
             else 
             {
-                if (current == NULL)
-                {
-                    current = malloc(sizeof(struct record));
-                    *start = current;
-                }
-                else
-                {
-                    current->next = malloc(sizeof(struct record));
-                    current = current->next;
-                }
+                /* parse accountno, name, and address from the file */
+                fgets(accountno_text, 31, file);
+                accountno = strtol(accountno_text, NULL, 10);
 
-                fgets(accountno, 31, file);
                 fgets(name, 31, file);
+                i = 0;
+                while (name[i++] != '\n');
+                name[i - 1] = '\0';
 
                 for (i = 0; i < 61; i++)
                 {
@@ -312,8 +354,8 @@ int readfile (struct record **start, char filename[])
                     if (address_buffer == '~')
                     {
                         address[i] = '\0';
-                        printf("Found the tilde: %s\n", address);
                         i = 61;
+                        /* grab either the space or mark the eof with the fgetc*/
                         fgets(buffer, 100, file);
                         fgetc(file);
                     }
@@ -322,16 +364,8 @@ int readfile (struct record **start, char filename[])
                         address[i] = address_buffer;
                     }
                 }
-                /*fgets(buffer, 50, file);*/
 
-                current->accountno = strtol(accountno, NULL, 10);
-
-                i = 0;
-                while (name[i++] != '\n');
-                name[i - 1] = '\0';
-                strncpy(current->name, name, 30);
-
-                strncpy(current->address, address, 60);
+                addRecord(start, accountno, name, address);
             }
         }
 
@@ -345,4 +379,44 @@ int readfile (struct record **start, char filename[])
     }
 
     return result;
+}
+
+
+/*****************************************************************
+//
+//  Function name: cleanup
+//
+//  DESCRIPTION:    cleans up the memory from the database.
+//
+//  Parameters:     start (struct record **): points to a pointer to the first record in the database.
+//
+//  Return values:  none
+//
+****************************************************************/
+
+void cleanup(struct record **start)
+{
+    struct record *current;
+    struct record *to_delete;
+
+    if (debug_mode == 1)
+    {
+        printf("DEBUG: Called cleanup. Cleaning up memory from the database.\n");
+    }
+
+    current = *start;
+    if (start == NULL)
+    {
+        printf("There are no records in the database\n");
+    }
+    else
+    {
+        while (current != NULL)
+        {
+            to_delete = current;
+            current = current->next;
+            free(to_delete);
+        }
+        *start = NULL;
+    }
 }

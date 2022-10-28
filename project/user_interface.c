@@ -31,7 +31,7 @@ int get_positive_int ();
 //
 //  Function name: main
 //
-//  DESCRIPTION:    Gets the option for the database from user
+//  DESCRIPTION:    Gets the option for the database from user 
 //                  and calls to the database functions.
 //
 //  Parameters:    argc (int) : The number of elements in argv
@@ -122,7 +122,7 @@ int main(int argc, char* argv[])
             while (name[i++] != '\n');
             name[i - 1] = '\0';
 
-            printf("Give an address and enter a backslash (\\) when finished.\n");
+            printf("Give an address and enter a tilde (~) when finished.\n");
             getaddress(address, 60);
 
             printf("\nAdding to database\n");
@@ -153,6 +153,7 @@ int main(int argc, char* argv[])
             is_quitting = 1;
 
             file_wrote = writefile(start, database_file_path);
+            cleanup(&start);
 
             if (file_wrote == 0)
             {
@@ -189,7 +190,7 @@ void getaddress (char str[], int size)
     char char_to_del;
 
     i = 0;
-    while (i < size - 1 && (str[i] = getchar()) != '\\')
+    while (i < size - 1 && (str[i] = getchar()) != '~')
     {
         i++;
     }
@@ -226,7 +227,6 @@ int get_positive_int ()
         {
             printf("Invalid input. Only POSITIVE INTEGERS are allowed.\n");
             while ((char_to_del = getchar()) != EOF && char_to_del != '\n');
-            /*fgets(invalid_input, 100, stdin);*/
         }
     }
 

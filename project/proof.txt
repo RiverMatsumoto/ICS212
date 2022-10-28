@@ -1,0 +1,9 @@
+Script started on Thu 27 Oct 2022 08:58:29 PM HST
+]0;riverjm@uhx02:~/ICS212/project1[?1034huhx02:/home/r/riverjm/ICS212/project1% make
+gcc -ansi -pedantic-errors -Wall -c user_interface.c
+gcc -ansi -pedantic-errors -Wall -c database.c
+gcc -o project1 user_interface.o database.o
+]0;riverjm@uhx02:~/ICS212/project1uhx02:/home/r/riverjm/ICS212/project1% exit
+exit
+
+Script done on Thu 27 Oct 2022 08:58:31 PM HST
