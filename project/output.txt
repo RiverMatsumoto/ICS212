@@ -1,8 +1,9 @@
-Script started on Thu 27 Oct 2022 08:58:47 PM HST
-]0;riverjm@uhx02:~/ICS212/project1[?1034huhx02:/home/r/riverjm/ICS212/project1% ./orij[K[K[K[Kproject1 
+Script started on Thu 27 Oct 2022 09:58:30 PM HST
+]0;riverjm@uhx02:~/ICS212/project[?1034huhx02:/home/r/riverjm/ICS212/project% ./proj
+bash: ./proj: No such file or directory
+]0;riverjm@uhx02:~/ICS212/projectuhx02:/home/r/riverjm/ICS212/project% ./project
 This program will access the database to add items, remove items, and read items.
-Couldn't write to the file
-There was no file to read from for the database
+Database file loaded and stored in database
 
 
 Type an option below and press enter:
@@ -11,13 +12,27 @@ printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
+prina tall
+
+Printing all records
+
+Accountno: 100015
+Name: Misty
+Address: 400 Route 12
+Water Gym
+
+Type an option below and press enter:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
 add
-Enter a positive integer:50
+Enter a positive integer:10
 Give a name:
-River
+Bobby
 Give an address and enter a tilde (~) when finished.
-This is
-My Address~
+My address~
 
 Adding to database
 
@@ -27,42 +42,25 @@ printall: print all records.
 find: find a specific record.
 delete: remove a specific item.
 quit: exit from the program.
-print
+prin    delete
+Enter a positive integer:10  100015
+
+Deleting record: 100015
+
+
+Type an option below and press enter:
+add: Add a new record.
+printall: print all records.
+find: find a specific record.
+delete: remove a specific item.
+quit: exit from the program.
+printall
 
 Printing all records
 
-Accountno: 50
-Name: River
-Address: This is
-My Address
-
-Type an option below and press enter:
-add: Add a new record.
-printall: print all records.
-find: find a specific record.
-delete: remove a specific item.
-quit: exit from the program.
-find 40
-
-Type an option below and press enter:
-add: Add a new record.
-printall: print all records.
-find: find a specific record.
-delete: remove a specific item.
-quit: exit from the program.
-find 50
-
-Type an option below and press enter:
-add: Add a new record.
-printall: print all records.
-find: find a specific record.
-delete: remove a specific item.
-quit: exit from the program.
-find
-Enter a positive integer:50
-
-Finding record: 50
-
+Accountno: 10
+Name: Bobby
+Address: My address
 
 Type an option below and press enter:
 add: Add a new record.
@@ -74,7 +72,7 @@ quit
 
 Successfully saved database to file
 Program will now exit
-]0;riverjm@uhx02:~/ICS212/project1uhx02:/home/r/riverjm/ICS212/project1% vi[Ke[Ke[K[Kexit
+]0;riverjm@uhx02:~/ICS212/projectuhx02:/home/r/riverjm/ICS212/project% exit
 exit
 
-Script done on Thu 27 Oct 2022 08:59:38 PM HST
+Script done on Thu 27 Oct 2022 09:59:09 PM HST

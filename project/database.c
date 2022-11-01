@@ -314,7 +314,6 @@ int readfile (struct record **start, char filename[])
 {
     FILE *file;
     int i, result, done_reading = 0;
-    /*struct record *current;*/
     int accountno;
     char accountno_text[31];
     char name[31];
@@ -327,12 +326,12 @@ int readfile (struct record **start, char filename[])
         printf("Called readfile, parsing the file to add to the database\n");
         printf("Filename: %s\n", filename);
     }
-
-    if ((file = fopen(filename, "r")) != NULL)
+    file = fopen(filename, "r");
+    if (file != NULL)
     {
         while (done_reading != 1)
         {
-            if (feof(file))
+            if (fgetc(file) == EOF)
             {
                 done_reading = 1;
             }
@@ -357,7 +356,6 @@ int readfile (struct record **start, char filename[])
                         i = 61;
                         /* grab either the space or mark the eof with the fgetc*/
                         fgets(buffer, 100, file);
-                        fgetc(file);
                     }
                     else
                     {
@@ -375,7 +373,7 @@ int readfile (struct record **start, char filename[])
     else
     {
         result = -1;
-        printf("Couldn't write to the file\n");
+        printf("Couldn't read from the file\n");
     }
 
     return result;
