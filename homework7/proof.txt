@@ -1,0 +1,7 @@
+Script started on Mon 31 Oct 2022 05:02:16 PM HST
+]0;riverjm@uhx02:~/ICS212/homework7[?1034huhx02:/home/r/riverjm/ICS212/homework7% g++ -ansi -pedantic-errors-[K Wall[K[K[K[K-Wall -c homework7.cpp
+]0;riverjm@uhx02:~/ICS212/homework7uhx02:/home/r/riverjm/ICS212/homework7% g++ -0[Ko homework7 homework7.c[Ko
+]0;riverjm@uhx02:~/ICS212/homework7uhx02:/home/r/riverjm/ICS212/homework7% exit
+exit
+
+Script done on Mon 31 Oct 2022 05:02:45 PM HST
