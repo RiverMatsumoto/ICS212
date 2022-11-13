@@ -1,0 +1,88 @@
+Script started on Sun 13 Nov 2022 01:49:15 AM HST
+]0;riverjm@uhx02:~/ICS212/homework8[?1034huhx02:/home/r/riverjm/ICS212/homework8% ls
+[0m[38;5;34mhomework8[0m    homework8.o  output.txt  request1.bin  request3.bin            response2_expected.bin
+homework8.c  Makefile     proof.txt   request2.bin  response1_expected.bin  response3_expected.bin
+]0;riverjm@uhx02:~/ICS212/homework8uhx02:/home/r/riverjm/ICS212/homework8% ./homework8 
+Successfully read request1 header.
+Header: DF 26 C6 A5 FF FF C7 FE 49 ED B2 71 50 3 0 0 FF FF 0 0 
+Source Port: 9951
+Destination Port: 42438
+Destination Port char 1: 198
+Destination Port char 2: 165
+Sequence Number: 4274520063
+Acknowledgement Number: 1907551561
+Control bits that are set to 1:
+FIN
+SYN
+
+Successfully created response1 header.
+Header: C6 A5 DF 26 0 0 C8 FE FF FF C7 FE 50 13 0 0 FF FF 0 0 
+Source Port: 42438
+Destination Port: 9951
+Destination Port char 1: 223
+Destination Port char 2: 38
+Sequence Number: 4274520064
+Acknowledgement Number: 4274520063
+Control bits that are set to 1:
+FIN
+SYN
+ACK
+
+Successfully read request2 header.
+Header: E5 F1 65 23 FF FF FF 4C 8D D2 D2 4F 50 11 0 0 FF FF 0 0 
+Source Port: 61925
+Destination Port: 9061
+Destination Port char 1: 101
+Destination Port char 2: 35
+Sequence Number: 1291845631
+Acknowledgement Number: 1339216525
+Control bits that are set to 1:
+FIN
+ACK
+
+Successfully created response2 header.
+Header: 65 23 A5 F5 0 0 0 4D FF FF FF 4C 50 11 0 0 FF FF 0 0 
+Source Port: 9061
+Destination Port: 62885
+Destination Port char 1: 165
+Destination Port char 2: 245
+Sequence Number: 1291845632
+Acknowledgement Number: 1291845631
+Control bits that are set to 1:
+FIN
+ACK
+
+Successfully read request3 header.
+Header: B 87 87 41 59 2E 6E 33 E0 A4 DB 4A 50 2A 0 0 FF FF 0 0 
+Source Port: 34571
+Destination Port: 16775
+Destination Port char 1: 135
+Destination Port char 2: 65
+Sequence Number: 862858841
+Acknowledgement Number: 1255908576
+Control bits that are set to 1:
+SYN
+PSH
+URG
+
+Successfully created response3 header.
+Header: 87 41 4B 83 5A 2E 6E 33 59 2E 6E 33 50 3A 0 0 FF FF 0 0 
+Source Port: 16775
+Destination Port: 33611
+Destination Port char 1: 75
+Destination Port char 2: 131
+Sequence Number: 862858842
+Acknowledgement Number: 862858841
+Control bits that are set to 1:
+SYN
+PSH
+ACK
+URG
+
+]0;riverjm@uhx02:~/ICS212/homework8uhx02:/home/r/riverjm/ICS212/homework8% ls
+[0m[38;5;34mhomework8[0m    homework8.o  output.txt  request1.bin  request3.bin   response1_expected.bin  response2_expected.bin  response3_expected.bin
+homework8.c  Makefile     proof.txt   request2.bin  response1.bin  response2.bin           response3.bin
+]0;riverjm@uhx02:~/ICS212/homework8uhx02:/home/r/riverjm/ICS212/homework8% exit
+exit
+
+Script done on Sun 13 Nov 2022 01:49:31 AM HST
