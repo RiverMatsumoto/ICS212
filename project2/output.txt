@@ -1,0 +1,149 @@
+Script started on Mon 21 Nov 2022 10:22:28 PM HST
+]0;riverjm@uhx02:~/ICS212/project2[?1034huhx02:/home/r/riverjm/ICS212/project2% ./project
+This program will let you add, delete, and find records in the database.
+
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+add
+Give a positive number: 
+10  
+Give your name: 
+River Matsumoto
+Give your address and enter a tilde (~) to mark the end:
+My
+Address
+123~
+============Adding record to the database============
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+p
+
+===========Printing all records==========
+
+Accountno = 10
+Name = "River Matsumoto"
+Address = "My
+Address
+123"
+
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+find
+
+=========Finding Record=========
+Give a positive number: 
+10
+=====Found Record=====
+accountno = 10
+name = "River Matsumoto"
+address = "My
+Address
+123"
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+quit
+
+=======Exiting program=======
+]0;riverjm@uhx02:~/ICS212/project2uhx02:/home/r/riverjm/ICS212/project2% ./project_debug
+===>DEBUG Reached llist constructor
+===>DEBUG filename = database.txt
+===>DEBUG Called readfile
+
+===>DEBUG Called llist::addRecord
+===>DEBUG Accountno = 10
+===>DEBUG Name = "River Matsumoto"
+===>DEBUG Address = "My
+Address
+123"
+===>DEBUG Running DEBUG release
+This program will let you add, delete, and find records in the database.
+
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+add
+Give a positive number: 
+25
+Give your name: 
+Paul
+Give your address and enter a tilde (~) to mark the end:
+Paul's
+Place 1234~
+============Adding record to the database============
+
+===>DEBUG Called llist::addRecord
+===>DEBUG Accountno = 25
+===>DEBUG Name = "Paul"
+===>DEBUG Address = "Paul's
+Place 1234"
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+p
+
+===========Printing all records==========
+
+Accountno = 25
+Name = "Paul"
+Address = "Paul's
+Place 1234"
+
+
+Accountno = 10
+Name = "River Matsumoto"
+Address = "My
+Address
+123"
+
+
+Type and option below and press enter: 
+add: add a new record
+printall: print all records in database.
+find: find a record
+delete: remove a record
+quit: exit from the program
+What option do you choose?
+quit
+
+=======Exiting program=======
+===>DEBUG Called destructor
+===>DEBUG Called writefile
+===>DEBUG Called cleanup
+]0;riverjm@uhx02:~/ICS212/project2uhx02:/home/r/riverjm/ICS212/project2% exit
+exit
+
+Script done on Mon 21 Nov 2022 10:23:32 PM HST

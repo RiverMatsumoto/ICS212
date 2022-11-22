@@ -1,0 +1,15 @@
+Script started on Mon 21 Nov 2022 10:18:05 PM HST
+]0;riverjm@uhx02:~/ICS212/project2[?1034huhx02:/home/r/riverjm/ICS212/project2% make -f release.am[K[Kmak
+g++ -ansi -pedantic-errors -Wall -c llist.cpp
+g++ -ansi -pedantic-errors -Wall -c user_interface.cpp
+g++ -o project llist.o user_interface.o
+]0;riverjm@uhx02:~/ICS212/project2uhx02:/home/r/riverjm/ICS212/project2% make -f [K[K[Kclean -f debug.mak
+rm project_debug llist.o user_interface.o
+]0;riverjm@uhx02:~/ICS212/project2uhx02:/home/r/riverjm/ICS212/project2% make -f debug.mak
+g++ -ansi -pedantic-errors -Wall -c llist.cpp -D DEBUGMODE
+g++ -ansi -pedantic-errors -Wall -c user_interface.cpp -D DEBUGMODE
+g++ -o project_debug llist.o user_interface.o
+]0;riverjm@uhx02:~/ICS212/project2uhx02:/home/r/riverjm/ICS212/project2% exit
+exit
+
+Script done on Mon 21 Nov 2022 10:18:27 PM HST
