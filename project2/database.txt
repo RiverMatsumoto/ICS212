@@ -1,8 +1,5 @@
-~25
-Paul
-Paul's
-Place 1234~~10
-River Matsumoto
+~10
+River
 My
-Address
-123~
+New
+Address~

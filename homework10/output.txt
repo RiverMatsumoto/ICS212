@@ -1,0 +1,35 @@
+Script started on Mon 28 Nov 2022 05:14:24 PM HST
+]0;riverjm@uhx02:~/ICS212/homework10[?1034huhx02:/home/r/riverjm/ICS212/homework10% ./homework10 
+Pokemon Constructor
+Pikachu Constructor
+Pokemon Constructor
+Dragonite Constructor
+Pokemon Constructor
+Charizard Constructor
+Adding nicknames to list and mapping each nickname to a pokemon
+
+Looping through nicknames and checking the pokedex
+Checking the pokedex for Electro Rat
+========= Pikachu Data =========
+Type: Electric
+Weight (lbs): 13.2
+Checking the pokedex for Cute Dragon
+========= Dragonite Data =========
+Type: Dragon Flying
+Weight (lbs): 463
+Checking the pokedex for Fire Dragon
+========= Charizard Data =========
+Type: Fire Flying
+Weight (lbs): 200
+
+Clearing heap memory
+Pikachu Destructor
+Pokemon Destructor
+Dragonite Destructor
+Pokemon Destructor
+Charizard Destructor
+Pokemon Destructor
+]0;riverjm@uhx02:~/ICS212/homework10uhx02:/home/r/riverjm/ICS212/homework10% exit
+exit
+
+Script done on Mon 28 Nov 2022 05:14:28 PM HST

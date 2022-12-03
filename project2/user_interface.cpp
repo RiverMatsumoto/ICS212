@@ -23,7 +23,7 @@
 #include <cstring>
 
 int getPositiveInt();
-void getaddress(std::string&);
+void getaddress(char[], int);
 bool compareOption(std::string&, const std::string&);
 
 /*************************************************
@@ -81,9 +81,8 @@ int main(int argc, char *argv[])
             strncpy(name_temp, name.c_str(), MAX_NAME_LEN);
 
             // get address
-            getaddress(address);
             char address_temp[60];
-            strncpy(address_temp, address.c_str(), MAX_ADDRESS_LEN);
+            getaddress(address_temp, MAX_ADDRESS_LEN);
 
             std::cout << "============Adding record to the database============" << std::endl;
             database.addRecord(accountno, name_temp, address_temp);
@@ -134,11 +133,11 @@ int main(int argc, char *argv[])
 //
 ****************************************************************/
 
-void getaddress(std::string& address)
+void getaddress(char str[], int size)
 {
     std::cout << "Give your address and enter a tilde (~) to mark the end:" << std::endl;
-    std::getline(std::cin, address, '~');
-    std::cin.ignore(1, '\n');
+    std::cin.getline(str, size, '~');
+    std::cin.ignore(100, '\n');
 }
 
 /*****************************************************************

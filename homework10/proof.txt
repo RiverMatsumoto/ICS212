@@ -1,0 +1,12 @@
+Script started on Mon 28 Nov 2022 05:13:58 PM HST
+]0;riverjm@uhx02:~/ICS212/homework10[?1034huhx02:/home/r/riverjm/ICS212/homework10% make
+g++ -ansi -pedantic-errors -Wall -c main.cpp
+g++ -ansi -pedantic-errors -Wall -c Pokemon.cpp
+g++ -ansi -pedantic-errors -Wall -c Pikachu.cpp
+g++ -ansi -pedantic-errors -Wall -c Dragonite.cpp
+g++ -ansi -pedantic-errors -Wall -c Charizard.cpp
+g++ -o homework10 Pikachu.o Pokemon.o main.o Dragonite.o Charizard.o
+]0;riverjm@uhx02:~/ICS212/homework10uhx02:/home/r/riverjm/ICS212/homework10% exit
+exit
+
+Script done on Mon 28 Nov 2022 05:14:01 PM HST
